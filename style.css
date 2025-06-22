@@ -1,0 +1,374 @@
+/* 🌿 Paleta de Cores */
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #e8f5e9;
+    --dark-color: #1b5e20;
+    --light-color: white;
+    --hover-color: #66bb6a;
+}
+
+/* 🔧 Reset e Configuração Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+/* 🔝 Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header h1 {
+    color: var(--light-color);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+/* 🏞️ Hero */
+.hero {
+    background: url('img/hero.jpg') center/cover no-repeat;
+    color: var(--light-color);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 60, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.hero h2 {
+    font-size: 52px;
+    color: var(--light-color);
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+    color: var(--light-color);
+}
+
+/* 🔘 Botões */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    color: var(--dark-color);
+}
+
+/* 📝 Seção Sobre */
+.about {
+    padding: 80px 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--dark-color);
+}
+
+.creator-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.creator-info img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+/* 🎠 Carrosséis */
+.carousel-section {
+    padding: 60px 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.carousel-section h2 {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel .item {
+    flex: 0 0 250px;
+    background: #e0f2f1;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+}
+
+.carousel .item:hover {
+    transform: scale(1.05);
+}
+
+.carousel .item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel .item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/* 🦶 Rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+}
+/* 📝 Seção Sobre com fundo verde */
+.about {
+    padding: 80px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--light-color);
+    border-radius: 20px;
+    margin: 40px 5%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: var(--light-color);
+    font-size: 36px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--light-color);
+    font-size: 18px;
+}
+
+.creator-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.creator-info img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+/* 📝 Seção Sobre com fundo verde maior, texto e imagens maiores */
+.about {
+    padding: 100px 40px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--light-color);
+    border-radius: 20px;
+    margin: 60px 5%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    color: var(--light-color);
+    font-size: 42px;
+}
+
+.about p {
+    max-width: 900px;
+    margin: auto;
+    color: var(--light-color);
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+/* 🔥 Imagens maiores */
+.creator-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.creator-info img {
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+/* 🖼️ Imagem de capa nas páginas */
+.cover img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    background-color: #2e7d32; /* Verde bonito */
+    color: white;
+    text-align: center;
+    padding: 150px 0; /* Aumenta a altura do rodapé */
+    margin-top: 40px;
+    font-size: 1.1em;
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+}
+
+.recipe {
+    background-color: #f0fff0; /* Verde bem clarinho */
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.recipe h2 {
+    color: #2e8b57; /* Verde mais forte */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe h3 {
+    color: #006400; /* Verde escuro */
+    margin-top: 20px;
+}
+
+.recipe ul,
+.recipe ol {
+    margin-left: 30px;
+}
+
+.recipe li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.recipe a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+.recipe a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #388E3C;
+    padding: 20px 0;
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+.header-center h1 {
+    color: white;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
