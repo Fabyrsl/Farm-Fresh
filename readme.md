@@ -70,35 +70,3 @@ Este site é um projeto educativo, sem fins lucrativos, e tem como principal obj
 
 Sobre
 O projeto Farm Fresh é um projeto desenvolvido para mostrar e ensinar um pouco sobre objetos, tradições e alimentos do campo.
-
-Recursos
- Leia-me
- Atividade
-Estrelas
- 0 estrelas
-Observadores
- 0 assistindo
-Garfos
- 0 garfos
-Lançamentos
-Nenhum lançamento publicado
-Criar uma nova versão
-Pacotes
-Nenhum pacote publicado
-Publique seu primeiro pacote
-Idiomas
-HTML
-93,9%
- 
-CSS
-6,1%
-Fluxos de trabalho sugeridos
-Com base na sua pilha de tecnologia
-Jekyll usando o logotipo da imagem do Docker
-Jekyll usando imagem Docker
-Empacote um site Jekyll usando a imagem Docker jekyll/builder.
-Logotipo do gerador genérico SLSA
-Gerador genérico SLSA
-Gere a procedência SLSA3 para seus fluxos de trabalho de lançamento existentes
-Mais fluxos de trabalho
-Rodapé
